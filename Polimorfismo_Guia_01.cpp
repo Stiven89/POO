@@ -6,7 +6,7 @@ using namespace std;
 class Animal {
 public:
     virtual void hacerSonido() {
-        cout << "Sonido genérico de un animal." << endl;
+        cout << "Sonido genÃ©rico de un animal." << endl;
     }
 };
 
@@ -18,7 +18,7 @@ public:
     }
 };
 
-// Función que usa polimorfismo
+// FunciÃ³n que usa polimorfismo
 void hazSonar(Animal& animal) {
     animal.hacerSonido();
 }
@@ -28,7 +28,7 @@ int main() {
     Animal miAnimal;
     Perro miPerro;
 
-    // Llamar a la función con diferentes tipos de objetos
+    // Llamar a la funciÃ³n con diferentes tipos de objetos
     hazSonar(miAnimal);
     hazSonar(miPerro);
 
