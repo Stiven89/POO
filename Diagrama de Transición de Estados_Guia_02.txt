@@ -1,0 +1,21 @@
+@startuml
+[*] --> NoAfiliado
+
+state NoAfiliado {
+  [*] --> Afiliado
+  Afiliado --> [*]
+}
+
+state Afiliado {
+  [*] --> AfiliadoConConsumo
+  AfiliadoConConsumo --> AfiliadoSinConsumo: PagarFactura
+  AfiliadoSinConsumo --> AfiliadoConConsumo: RegistrarConsumo
+  AfiliadoSinConsumo --> AfiliadoSinConsumo: AumentarFondos
+}
+
+state AfiliadoConConsumo {
+  [*] --> AfiliadoSinConsumo: PagarFactura
+  AfiliadoSinConsumo --> AfiliadoSinConsumo: RegistrarConsumo
+}
+
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+class Socio {
+  - cedula: String
+  - nombre: String
+  - fondosDisponibles: double
+  - tipoSuscripcion: String
+  - facturasSinPagar: List<Factura>
+  - personasAutorizadas: List<PersonaAutorizada>
+}
+
+class PersonaAutorizada {
+  - nombre: String
+}
+
+class Factura {
+  - concepto: String
+  - valor: double
+  - generador: String
+}
+
+Socio "1" -- "0..*" Factura
+Socio "1" -- "0..*" PersonaAutorizada
+@enduml

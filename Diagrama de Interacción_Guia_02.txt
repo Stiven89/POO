@@ -1,0 +1,18 @@
+@startuml
+actor Usuario
+participant Socio
+participant PersonaAutorizada
+participant Factura
+
+Usuario -> Socio: AfiliarSocio
+Usuario -> Socio: RegistrarPersonaAutorizada
+Usuario -> Socio: PagarFactura
+Usuario -> Socio: RegistrarConsumo
+Usuario -> Socio: AumentarFondos
+
+Socio -> Factura: GenerarFactura
+Socio -> Factura: PagarFactura
+Socio -> PersonaAutorizada: AgregarPersonaAutorizada
+Socio -> PersonaAutorizada: EliminarPersonaAutorizada
+@enduml
+

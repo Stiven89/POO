@@ -1,0 +1,17 @@
+@startuml
+actor Usuario
+actor Socio
+actor PersonaAutorizada
+
+usecase AfiliarSocio
+usecase RegistrarPersonaAutorizada
+usecase PagarFactura
+usecase RegistrarConsumo
+usecase AumentarFondos
+
+Usuario -- AfiliarSocio
+Usuario -- RegistrarPersonaAutorizada
+Socio -- PagarFactura
+PersonaAutorizada -- RegistrarConsumo
+Socio -- AumentarFondos
+@enduml
