@@ -2,12 +2,12 @@
 
 using namespace std;
 
-// Definición de la clase
+// DefiniciÃ³n de la clase
 class Saludo {
 public:
-    // Método para mostrar un saludo
+    // MÃ©todo para mostrar un saludo
     void saludar() {
-        cout << "¡Hola, soy un objeto de la clase Saludo!" << endl;
+        cout << "Â¡Hola, soy un objeto de la clase Saludo!" << endl;
     }
 };
 
@@ -15,7 +15,7 @@ int main() {
     // Crear un objeto de la clase Saludo
     Saludo miSaludo;
 
-    // Llamar al método del objeto
+    // Llamar al mÃ©todo del objeto
     miSaludo.saludar();
 
     return 0;
