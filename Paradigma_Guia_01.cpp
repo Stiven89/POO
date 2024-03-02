@@ -2,23 +2,23 @@
 
 using namespace std;
 
-// Programaci髇 imperativa
+// Programaci贸n imperativa
 void programacionImperativa() {
     int suma = 0;
     for (int i = 1; i <= 5; ++i) {
         suma += i;
     }
-    cout << "Suma (Programaci髇 Imperativa): " << suma << endl;
+    cout << "Suma (Programaci贸n Imperativa): " << suma << endl;
 }
 
-// Programaci髇 funcional
+// Programaci贸n funcional
 int sumaFuncional(int a, int b) {
     return a + b;
 }
 
 void programacionFuncional() {
     int resultado = sumaFuncional(1, sumaFuncional(2, sumaFuncional(3, sumaFuncional(4, 5))));
-    cout << "Suma (Programaci髇 Funcional): " << resultado << endl;
+    cout << "Suma (Programaci贸n Funcional): " << resultado << endl;
 }
 
 int main() {
