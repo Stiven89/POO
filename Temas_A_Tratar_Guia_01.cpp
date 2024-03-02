@@ -2,33 +2,33 @@
 
 using namespace std;
 
-// Definición de la clase Animal (general)
+// DefiniciÃ³n de la clase Animal (general)
 class Animal {
 public:
-    // Método virtual para hacer sonido
+    // MÃ©todo virtual para hacer sonido
     virtual void hacerSonido() {
-        cout << "Sonido genérico de un animal" << endl;
+        cout << "Sonido genÃ©rico de un animal" << endl;
     }
 };
 
-// Clase derivada Perro (especialización)
+// Clase derivada Perro (especializaciÃ³n)
 class Perro : public Animal {
 public:
-    // Implementación específica del método hacerSonido para Perro
+    // ImplementaciÃ³n especÃ­fica del mÃ©todo hacerSonido para Perro
     void hacerSonido() override {
         cout << "Guau guau" << endl;
     }
 
-    // Nuevo método específico para Perro
+    // Nuevo mÃ©todo especÃ­fico para Perro
     void perseguirCola() {
         cout << "Persiguiendo la cola" << endl;
     }
 };
 
-// Clase derivada Gato (especialización)
+// Clase derivada Gato (especializaciÃ³n)
 class Gato : public Animal {
 public:
-    // Implementación específica del método hacerSonido para Gato
+    // ImplementaciÃ³n especÃ­fica del mÃ©todo hacerSonido para Gato
     void hacerSonido() override {
         cout << "Miau miau" << endl;
     }
@@ -40,8 +40,8 @@ int main() {
     Perro miPerro;
     Gato miGato;
 
-    // Llamar al método hacerSonido de cada objeto
-    cout << "Sonido del animal genérico: ";
+    // Llamar al mÃ©todo hacerSonido de cada objeto
+    cout << "Sonido del animal genÃ©rico: ";
     animalGenerico.hacerSonido();
 
     cout << "Sonido de mi perro: ";
@@ -50,7 +50,7 @@ int main() {
     cout << "Sonido de mi gato: ";
     miGato.hacerSonido();
 
-    // Llamar a métodos específicos de las clases derivadas
+    // Llamar a mÃ©todos especÃ­ficos de las clases derivadas
     miPerro.perseguirCola();
 
     return 0;
