@@ -6,7 +6,7 @@ using namespace std;
 class Vehiculo {
 public:
     void arrancar() {
-        cout << "Vehículo arrancado." << endl;
+        cout << "VehÃ­culo arrancado." << endl;
     }
 };
 
@@ -22,7 +22,7 @@ int main() {
     // Crear un coche
     Coche miCoche;
 
-    // Utilizar métodos de la clase base y derivada
+    // Utilizar mÃ©todos de la clase base y derivada
     miCoche.arrancar();
     miCoche.conducir();
 
