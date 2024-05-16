@@ -1,3 +1,5 @@
+import java.io.FileNotFoundException;
+
 // Definición de la superclase Vehiculo
 public class Vehiculo {
     protected String marca; // Accesible en las subclases
@@ -57,19 +59,32 @@ public class Persona {
 // Clase principal que prueba la jerarquía de clases
 public class Main {
     public static void main(String[] args) {
-        // Crear un objeto de la clase Coche
-        Coche miCoche = new Coche("Toyota", "Corolla", "Rojo");
+        try {
+            // Crear un objeto de la clase Coche
+            Coche miCoche = new Coche("Toyota", "Corolla", "Rojo");
 
-        // Imprimir la descripción del coche
-        System.out.println("Descripción del coche:");
-        System.out.println(miCoche.getDescription());
+            // Imprimir la descripción del coche
+            System.out.println("Descripción del coche:");
+            System.out.println(miCoche.getDescription());
 
-        // Crear objetos de la clase Persona
-        Persona persona1 = new Persona("Juan", 30);
-        Persona persona2 = new Persona("Juan", 30);
+            // Crear objetos de la clase Persona
+            Persona persona1 = new Persona("Juan", 30);
+            Persona persona2 = new Persona("Juan", 30);
 
-        // Comparar objetos Persona utilizando el método equals()
-        System.out.println("\nComparación de personas:");
-        System.out.println("persona1 equals persona2: " + persona1.equals(persona2));
+            // Comparar objetos Persona utilizando el método equals()
+            System.out.println("\nComparación de personas:");
+            System.out.println("persona1 equals persona2: " + persona1.equals(persona2));
+
+            // Provocar una excepción
+            throw new FileNotFoundException("Archivo no encontrado");
+        } catch (FileNotFoundException e) {
+            // Imprimir el mensaje de la excepción
+            System.out.println("Se produjo un error: " + e.getMessage());
+            // Imprimir la pila de llamadas de la excepción
+            e.printStackTrace();
+        } finally {
+            // Este bloque se ejecutará siempre, independientemente de si hay una excepción o no
+            System.out.println("Finalizando...");
+        }
     }
 }
